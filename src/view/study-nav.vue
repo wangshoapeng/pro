@@ -37,7 +37,7 @@
       <router-link class="base-link" to="/transfrom">Trans From</router-link>
       <router-link class="base-link" to="/iviewA">iviewA</router-link>
       <router-link class="base-link" to="/propsarray">propsArray</router-link>
-      <div>git 提交测试 test123123123213</div>
+      <div>git 提交测试 </div>
     </div>
   </div>
 </template>

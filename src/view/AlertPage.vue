@@ -8,28 +8,28 @@
   </div>
 </template>
 <script>
-import tAlert from '../components/Alear';
+import tAlert from '../components/Alear'
 export default {
-  data() {
+  data () {
     return {
       state: 'close',
       alertOpen: false
-    };
+    }
   },
   methods: {
-    choice(e) {
+    choice (e) {
       if (e) {
-        this.state = '确定';
-      }else{
-        this.state = '取消';
+        this.state = '确定'
+      } else {
+        this.state = '取消'
       }
-      this.alertOpen = false;
+      this.alertOpen = false
     }
   },
   components: {
     tAlert
   }
-};
+}
 </script>
 <style>
 </style>
