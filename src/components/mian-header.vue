@@ -3,6 +3,8 @@
     <span @click="$router.go(-1)" class="goback-icon" v-if="back">
       <i class="iconfont x-fanhui"></i>
       返回</span>
+    <span class="header-more">
+      <i class="iconfont x-gengduo"></i></span>
     <slot></slot>
   </div>
 </template>
@@ -26,16 +28,21 @@ export default {
   text-decoration: none;
   height: 1rem;
   line-height: 1rem;
-  font-size: 0.24rem;
+  font-size: 0.28rem;
   background-color: #464c5b;
   margin-bottom: 0.24rem;
   border-radius: 0.05rem;
 }
 .goback-icon {
-  position: absolute;
-  left: 0;
+  float: left;
   color: white;
   font-weight: 300;
-  padding: 0 10px;
+  padding: 0 0.1rem;
+}
+.header-more {
+  float: right;
+  color: white;
+  font-size: 0.48rem;
+  padding: 0 0.4rem;
 }
 </style>

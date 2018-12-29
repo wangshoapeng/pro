@@ -11,23 +11,12 @@
   box-shadow: 1px 1px 3px 1px;
 }
 
-.base-link::after {
-  content: '>>>';
-  position: absolute;
-  right: 0;
-  transform: translate(-100%, 0);
-  transition: all .2s;
+.base-link>i {
+  float: right;
 }
 
-.base-link:hover,
-.base-link:active {
+.base-link:hover {
   color: white;
-  background-color: rgba(0, 0, 0, .5);
-}
-
-.base-link:hover::after,
-.base-link:active::after {
-  transform: translate(-70%, 0)
 }
 
 .router-view-enter,
