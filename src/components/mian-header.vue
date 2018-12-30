@@ -43,6 +43,11 @@ export default {
         {
           url: `https://juejin.im/`,
           iconClass: 'iconfont x-wentijieda',
+          iconColor: '#F2981C'
+        },
+        {
+          url: `https://fanyi.baidu.com/?aldtype=16047#auto/zh`,
+          iconClass: 'iconfont x-zhongwen',
           iconColor: 'black'
         }
       ]

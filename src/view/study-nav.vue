@@ -1,9 +1,14 @@
 <template>
   <div>
     <t-header>Demo-List</t-header>
-    <div class="scroll-wrap" ref='scroll'>
-      <router-link v-for="item in studyNavList" class="base-link" :to="item.link" :key="item.link">{{item.content}}
-        <i class="iconfont" :class="item.iconClass?item.iconClass:'x-jiantouyou'"></i>
+    <div class="scroll-wrap"
+         ref='scroll'>
+      <router-link v-for="item in studyNavList"
+                   class="base-link"
+                   :to="item.link"
+                   :key="item.link">{{item.content}}
+        <i class="iconfont"
+           :class="item.iconClass?item.iconClass:'x-jiantouyou'"></i>
       </router-link>
     </div>
   </div>
