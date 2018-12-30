@@ -1,10 +1,10 @@
 <template>
   <div class="mian-header">
-    <span @click="$router.go(-1)" class="header-left-icon" v-if="back">
-      <i class="iconfont x-fanhui">Back</i>
-    </span>
-    <span @click="$router.go(0)" class="header-left-icon" style="marginLeft:0.3rem" v-else>
+    <span @click="$router.go(0)" class="header-left-icon" style="marginLeft:0.3rem" v-if="!back">
       <i class="iconfont x-shuaxin"></i>
+    </span>
+    <span @click="$router.go(-1)" class="header-left-icon" v-else>
+      <i class="iconfont x-fanhui">Back</i>
     </span>
     <span class="header-more-icon" @click="showMore = !showMore">
       <i class="iconfont" :class="showMore?'x-xian':'x-gengduo'"></i></span>
@@ -31,14 +31,19 @@ export default {
           iconColor: 'blue'
         },
         {
-          url: 'https://cn.vuejs.org/v2/guide/',
+          url: 'https:/cn.vuejs.org/v2/guide/',
           iconClass: 'iconfont x-vuejs',
           iconColor: 'green'
         },
         {
           url: 'http://es6.ruanyifeng.com/',
-          iconClass: 'iconfont x- x-js',
+          iconClass: 'iconfont x-js',
           iconColor: 'red'
+        },
+        {
+          url: `https://juejin.im/`,
+          iconClass: 'iconfont x-wentijieda',
+          iconColor: 'black'
         }
       ]
     }
@@ -76,7 +81,7 @@ export default {
   position: absolute;
   right: 0;
   color: white;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   padding: 0 0.2rem;
 }
 .header-more-wrap {
