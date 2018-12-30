@@ -4,7 +4,7 @@
       <i class="iconfont x-shuaxin"></i>
     </span>
     <span @click="$router.go(-1)" class="header-left-icon" v-else>
-      <i class="iconfont x-fanhui">Back</i>
+      <i class="iconfont x-fanhui"> Back</i>
     </span>
     <span class="header-more-icon" @click="showMore = !showMore">
       <i class="iconfont" :class="showMore?'x-xian':'x-gengduo'"></i></span>
@@ -66,20 +66,16 @@ export default {
 .mian-header {
   position: relative;
   text-align: center;
-  display: block;
-  color: white;
-  text-decoration: none;
+  color: #fff;
   height: 1rem;
   line-height: 1rem;
-  font-size: 0.3rem;
+  font-size: 0.35rem;
   background-color: #464c5b;
   margin-bottom: 0.24rem;
-  border-radius: 0.05rem;
 }
 .header-left-icon {
   position: absolute;
   left: 0;
-  color: white;
   font-weight: 300;
   padding: 0 0.1rem;
 }
