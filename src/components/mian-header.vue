@@ -1,8 +1,8 @@
 <template>
   <div class="mian-header">
     <span @click="$router.go(-1)" class="header-left-icon" v-if="back">
-      <i class="iconfont x-fanhui"></i>
-      返回</span>
+      <i class="iconfont x-fanhui">Back</i>
+    </span>
     <span @click="$router.go(0)" class="header-left-icon" style="marginLeft:0.2rem" v-else>
       <i class="iconfont x-shuaxin"></i>
     </span>
@@ -11,7 +11,7 @@
     <slot></slot>
     <transition enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
       <div class="header-more-wrap" v-if="showMore">
-        <a v-for=" item in moreList" :key="item.url" :href="item.url" target="_black" :style="{color:item.color}">
+        <a v-for=" item in moreList" :key="item.url" :href="item.url" target="_black" :style="{color:item.iconColor}">
           <i :class="item.iconClass"></i>
         </a>
       </div>
@@ -28,17 +28,17 @@ export default {
         {
           url: 'https://www.baidu.com/',
           iconClass: 'iconfont x-baidu',
-          color: 'blue'
+          iconColor: 'blue'
         },
         {
           url: 'https://cn.vuejs.org/v2/guide/',
           iconClass: 'iconfont x-vuejs',
-          color: 'green'
+          iconColor: 'green'
         },
         {
           url: 'http://es6.ruanyifeng.com/',
           iconClass: 'iconfont x- x-js',
-          color: 'red'
+          iconColor: 'red'
         }
       ]
     }
