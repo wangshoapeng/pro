@@ -3,7 +3,7 @@
     <span @click="$router.go(-1)" class="header-left-icon" v-if="back">
       <i class="iconfont x-fanhui">Back</i>
     </span>
-    <span @click="$router.go(0)" class="header-left-icon" style="marginLeft:0.2rem" v-else>
+    <span @click="$router.go(0)" class="header-left-icon" style="marginLeft:0.3rem" v-else>
       <i class="iconfont x-shuaxin"></i>
     </span>
     <span class="header-more-icon" @click="showMore = !showMore">

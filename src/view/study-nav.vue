@@ -1,42 +1,10 @@
 <template>
   <div>
-    <t-header> Demo-List</t-header>
+    <t-header>Demo-List</t-header>
     <div class="scroll-wrap" ref='scroll'>
-      <router-link class="base-link" to="/prop">Prop-传值 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/emit">$emit-事件 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alert">alert <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alertMin">alert Min <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/transfrom">Trans From <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/iviewA">iviewA <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/propsarray">propsArray <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/prop">Prop-传值 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/emit">$emit-事件 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alert">alert <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alertMin">alert Min <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/transfrom">Trans From <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/iviewA">iviewA <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/propsarray">propsArray <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/prop">Prop-传值 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/emit">$emit-事件 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alert">alert <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alertMin">alert Min <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/transfrom">Trans From <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/iviewA">iviewA <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/propsarray">propsArray <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/prop">Prop-传值 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/emit">$emit-事件 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alert">alert <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alertMin">alert Min <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/transfrom">Trans From <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/iviewA">iviewA <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/propsarray">propsArray <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/prop">Prop-传值 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/emit">$emit-事件 <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alert">alert <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/alertMin">alert Min <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/transfrom">Trans From <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/iviewA">iviewA <i class="iconfont x-jiantouyou"></i></router-link>
-      <router-link class="base-link" to="/propsarray">propsArray <i class="iconfont x-jiantouyou"></i></router-link>
+      <router-link v-for="item in studyNavList" class="base-link" :to="item.link" :key="item.link">{{item.content}}
+        <i class="iconfont" :class="item.iconClass?item.iconClass:'x-jiantouyou'"></i>
+      </router-link>
     </div>
   </div>
 </template>
@@ -44,11 +12,17 @@
 <script>
 export default {
   data () {
-    return {}
-  },
-  mounted () {},
-  methods: {},
-  components: {}
+    return {
+      studyNavList: [
+        { link: '/prop', content: 'Prop-传值', iconClass: '' },
+        { link: '/emit', content: '$emit-事件', iconClass: '' },
+        { link: '/alert', content: 'alert Min', iconClass: '' },
+        { link: '/alertMin', content: '$emit-事件', iconClass: '' },
+        { link: '/transfrom', content: 'Trans From', iconClass: '' },
+        { link: '/propsarray', content: 'propsArray ', iconClass: '' }
+      ]
+    }
+  }
 }
 </script>
 <style lang='scss'>

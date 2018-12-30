@@ -3,15 +3,13 @@
     <t-header :back="false">
       Study-Home
     </t-header>
-    <router-link tag="div"
-                 class="base-link"
-                 to="/studynav">去学习>>>></router-link>
+    <router-link tag="div" class="base-link" to="/studynav">去学习>>>></router-link>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {}
   },
   components: {}
