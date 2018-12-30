@@ -19,7 +19,6 @@
     <div v-if="showOutLink" class="mask" @click="showOutLink=!showOutLink"></div>
   </div>
 </template>
-
 <script>
 export default {
   data () {
