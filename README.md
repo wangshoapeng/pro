@@ -1,7 +1,8 @@
 # project-01
 
 > A Vue.js project
-> Pro is Test && Study project ! Thanks for your watching !!!
+
+> Pro is a Test && Study project ! Thanks for your watching !!!
 
 ## Build Setup
 
