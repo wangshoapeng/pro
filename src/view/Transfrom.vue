@@ -27,9 +27,7 @@ export default {
     reset () {
       window.listT = this.list
       this.list.sort((a, b) => {
-        // return Math.random() > 0.5 ? 1 : -1;
-        // return 1;
-        return -1
+        return Math.random() > 0.5 ? -1 : 1
       })
     }
   },
