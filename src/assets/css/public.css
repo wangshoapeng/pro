@@ -3,6 +3,7 @@
   height: .8rem;
   line-height: .8rem;
   text-align: left;
+  font-size: .24rem;
   background-color: #d7dde4;
   margin: .2rem .2rem 0px;
   padding: 0 .4rem;
@@ -57,4 +58,14 @@
   padding: .1rem .1rem;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }

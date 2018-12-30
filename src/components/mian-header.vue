@@ -16,6 +16,7 @@
         </a>
       </div>
     </transition>
+    <div class="mask" @click="showMore=!showMore" v-if="showMore"></div>
   </div>
 </template>
 
@@ -96,7 +97,7 @@ export default {
   color: #657180;
   top: 100%;
   padding: 0 0.1rem;
-  z-index: 1;
+  z-index: 2;
   a {
     display: block;
     width: 1rem;
