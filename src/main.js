@@ -10,7 +10,6 @@ import '@/assets/js/rem.js'
 import 'iview/dist/styles/iview.css'
 import '@/assets/icon/iconfont.css'
 
-
 import Header from '@/components/mian-header.vue'
 
 Vue.use(iView)
@@ -18,8 +17,7 @@ Vue.use(iView)
 Vue.component('tHeader', Header)
 
 Vue.config.productionTip = false
-
-
+/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
