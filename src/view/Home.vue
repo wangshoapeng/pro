@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home">
     <t-header :back="false">
       Study-Home
     </t-header>
