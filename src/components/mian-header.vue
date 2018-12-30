@@ -1,22 +1,22 @@
 <template>
   <div class="mian-header">
-    <span @click="$router.go(0)" class="header-left-icon" style="marginLeft:0.3rem" v-if="!back">
-      <i class="iconfont x-shuaxin"></i>
-    </span>
-    <span @click="$router.go(-1)" class="header-left-icon" v-else>
+    <span v-if="back" @click="$router.go(-1)" class="header-left-icon">
       <i class="iconfont x-fanhui"> Back</i>
     </span>
-    <span class="header-more-icon" @click="showMore = !showMore">
-      <i class="iconfont" :class="showMore?'x-xian':'x-gengduo'"></i></span>
+    <span v-else @click="$router.go(0)" class="header-left-icon" style="marginLeft:0.3rem">
+      <i class="iconfont x-shuaxin"></i>
+    </span>
+    <span class="header-more-icon" @click="showOutLink = !showOutLink">
+      <i class="iconfont" :class="showOutLink?'x-xian':'x-gengduo'"></i></span>
     <slot></slot>
     <transition enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
-      <div class="header-more-wrap" v-if="showMore">
-        <a v-for=" item in moreList" :key="item.url" :href="item.url" target="_black" :style="{color:item.iconColor}">
+      <div class="header-more-wrap" v-if="showOutLink">
+        <a v-for=" item in outLinkList" :key="item.url" :href="item.url" target="_black" :style="{color:item.iconColor}">
           <i :class="item.iconClass"></i>
         </a>
       </div>
     </transition>
-    <div class="mask" @click="showMore=!showMore" v-if="showMore"></div>
+    <div v-if="showOutLink" class="mask" @click="showOutLink=!showOutLink"></div>
   </div>
 </template>
 
@@ -24,8 +24,8 @@
 export default {
   data () {
     return {
-      showMore: false,
-      moreList: [
+      showOutLink: false,
+      outLinkList: [
         {
           url: 'https://www.baidu.com/',
           iconClass: 'iconfont x-baidu',
@@ -75,24 +75,19 @@ export default {
 }
 .header-left-icon {
   position: absolute;
-  left: 0;
+  left: 0.1rem;
   font-weight: 300;
-  padding: 0 0.1rem;
 }
 .header-more-icon {
   position: absolute;
-  right: 0;
-  color: white;
+  right: 0.2rem;
   font-size: 0.8rem;
-  padding: 0 0.2rem;
 }
 .header-more-wrap {
   position: absolute;
-  right: 0;
+  right: 0.1rem;
   font-size: 0.6rem;
-  color: #657180;
   top: 100%;
-  padding: 0 0.1rem;
   z-index: 2;
   a {
     display: block;
