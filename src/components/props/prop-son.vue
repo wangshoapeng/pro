@@ -2,9 +2,9 @@
   <div class="child">
     <!-- 接受过来的数据：{{msg}} -->
     <label>
-      <textarea type="text"
-                :value="msg"></textarea>
+      <textarea type="text" :value="msg"></textarea>
     </label>
+    <button @click="bus.$emit('getson','change')">up father</button>
   </div>
 </template>
 

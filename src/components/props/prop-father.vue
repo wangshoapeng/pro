@@ -16,6 +16,11 @@ export default {
   data () {
     return { userName: '原始数据' }
   },
+  created () {
+    this.bus.$on('getson', event => {
+      console.log(event)
+    })
+  },
   components: { 't-child': Child },
   watch: {
     userName (newvalue, oldvalue) {
