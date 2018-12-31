@@ -1,10 +1,10 @@
 <template>
   <div class="prop-father">
     <t-header>prop-传值</t-header>
+    <div class="scroll-wrap"></div>
     <h1>父级组件</h1>
     <!-- 父元素数据{{userName}} -->
-    <input type="text"
-           v-model="userName">
+    <input type="text" v-model="userName">
     <t-child :msg=userName></t-child>
   </div>
 </template>

@@ -19,6 +19,16 @@ export default {
         { link: '/alert', content: 'alert Min', iconClass: '' },
         { link: '/alertMin', content: '$emit-事件', iconClass: '' },
         { link: '/transfrom', content: 'Trans From', iconClass: '' },
+        { link: '/propsarray', content: 'propsArray ', iconClass: '' },
+        { link: '/emit', content: '$emit-事件', iconClass: '' },
+        { link: '/alert', content: 'alert Min', iconClass: '' },
+        { link: '/alertMin', content: '$emit-事件', iconClass: '' },
+        { link: '/transfrom', content: 'Trans From', iconClass: '' },
+        { link: '/propsarray', content: 'propsArray ', iconClass: '' },
+        { link: '/emit', content: '$emit-事件', iconClass: '' },
+        { link: '/alert', content: 'alert Min', iconClass: '' },
+        { link: '/alertMin', content: '$emit-事件', iconClass: '' },
+        { link: '/transfrom', content: 'Trans From', iconClass: '' },
         { link: '/propsarray', content: 'propsArray ', iconClass: '' }
       ]
     }
