@@ -14,7 +14,7 @@ export default {
 <style>
 @import url('../src/assets/css/reset.css');
 @import url('../src/assets/css/public.css');
-@import url('../src/assets/css/animate.css');
+@import url('../src/assets/css/public-animation.css');
 
 html,
 body,

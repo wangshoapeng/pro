@@ -2,7 +2,7 @@
   <div id="study-nav">
     <t-header>Demo-List</t-header>
     <div class="scroll-wrap" ref='scroll'>
-      <router-link v-for="item in studyNavList" class="base-link" :to="item.link" :key="item.link">{{item.content}}
+      <router-link v-for="(item,index) in studyNavList" class="base-link" :to="item.link" :key="index">{{item.content}}
         <i class="iconfont" :class="item.iconClass || 'x-jiantouyou'"></i>
       </router-link>
     </div>

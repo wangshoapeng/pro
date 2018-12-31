@@ -9,7 +9,7 @@
     <span class="header-more-icon" @click="showOutLink = !showOutLink">
       <i class="iconfont" :class="showOutLink?'x-xian':'x-gengduo'"></i></span>
     <slot></slot>
-    <transition enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
+    <transition name="fade-down">
       <div class="header-more-wrap" v-if="showOutLink">
         <a v-for=" item in outLinkList" :key="item.url" :href="item.url" target="_black" :style="{color:item.iconColor}">
           <i :class="item.iconClass"></i>
@@ -85,6 +85,7 @@ export default {
 .header-more-wrap {
   position: absolute;
   right: 0.1rem;
+  transform-origin: 50% 0;
   font-size: 0.6rem;
   top: 100%;
   z-index: 2;

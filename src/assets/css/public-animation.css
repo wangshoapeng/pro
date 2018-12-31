@@ -1,0 +1,21 @@
+.router-view-enter,
+.router-view-leave-to {
+  opacity: 0;
+}
+
+.router-view-enter-active,
+.router-view-leave-active {
+  transition: 0.3s;
+}
+
+
+.fade-down-enter,
+.fade-down-leave-to {
+  opacity: 0;
+  transform: scale(1, .5);
+}
+
+.fade-down-enter-active,
+.fade-down-leave-active {
+  transition: all .3s;
+}
