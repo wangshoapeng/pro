@@ -1,11 +1,12 @@
 <template>
   <div class="prop-father">
     <t-header>prop-传值</t-header>
-    <div class="scroll-wrap"></div>
-    <h1>父级组件</h1>
-    <!-- 父元素数据{{userName}} -->
-    <input type="text" v-model="userName">
-    <t-child :msg=userName></t-child>
+    <div class="scroll-wrap">
+      <p>文档</p>
+      <!-- 父元素数据{{userName}} -->
+      <input type="text" v-model="userName">
+      <t-child :msg=userName></t-child>
+    </div>
   </div>
 </template>
 
@@ -28,5 +29,9 @@ export default {
 <style lang='scss'>
 .prop-father {
   border: 1px solid gray;
+}
+iframe {
+  width: 100%;
+  height: 100%;
 }
 </style>
