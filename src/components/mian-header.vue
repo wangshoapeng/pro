@@ -11,7 +11,7 @@
     <slot></slot>
     <transition name="fade-down">
       <div class="header-more-wrap" v-if="showOutLink">
-        <a v-for=" item in outLinkList" :key="item.url" :href="item.url" target="_black" :style="{color:item.iconColor}">
+        <a v-for=" item in outLinkList" :key="item.url" :href="item.url" :style="{color:item.iconColor}">
           <i :class="item.iconClass"></i>
         </a>
       </div>
