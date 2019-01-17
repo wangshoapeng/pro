@@ -53,6 +53,11 @@ export default new Router({
     path: '/iviewA',
     name: 'iviewA',
     component: () => import('../view/IviewA.vue')
+  },
+  {
+    path: '/tab',
+    name: 'tab',
+    component: () => import('../view/tab.vue')
   }
   ]
 })
