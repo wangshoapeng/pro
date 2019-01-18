@@ -5,8 +5,7 @@
       <div v-for="(commodity,index) in commodityList" :key="index">
         <div class="commodity">
           <div class="commodity-title">{{commodity.name}}</div>
-          <div class="commodity-photo">iphone8</div>
-          <div class="commodiyt-price">{{commodity.price}}</div>
+          <div class="commodiyt-price">￥{{commodity.price}}</div>
           <button @click="buy(index)">buy</button>
         </div>
       </div>
@@ -15,9 +14,9 @@
       <table border="1" class="shopcar">
         <tr>
           <th width='10%'></th>
-          <th width='20%'>商品名称</th>
+          <th width='25%'>商品名称</th>
           <th width="20%">商品单价</th>
-          <th width="20%">购买数量</th>
+          <th width="15%">数量</th>
           <th>总价</th>
         </tr>
         <tr v-for="(goods,index) in shopingCar" :key="index">
@@ -50,23 +49,23 @@ export default {
       commodityList: [
         {
           name: 'iphone7',
-          price: '0.55'
+          price: '4955'
         },
         {
-          name: 'iphone6',
-          price: '2.551'
+          name: 'iPad Pro',
+          price: '3999'
         },
         {
-          name: 'iphone5',
-          price: '5555'
+          name: 'MacBook Pro',
+          price: '19990'
         },
         {
-          name: 'iphone8',
-          price: '5555'
+          name: 'RedMI',
+          price: '999.98'
         },
         {
-          name: 'iphone0',
-          price: '5555'
+          name: 'iphoneX',
+          price: '36.87'
         }
       ],
       shopingCar: []
@@ -110,20 +109,21 @@ export default {
 </script>
 <style lang='scss'>
 .commodity-box {
-  width: 7rem;
+  width: 7.3rem;
   margin: 0 auto;
+  font-size: 0.24rem;
   display: flex;
   justify-content: space-between;
   .commodity {
     margin-right: 0.05rem;
-    background-color: pink;
   }
 }
 .shopcar {
-  width: 7rem;
+  width: 7.3rem;
   margin: 0 auto;
 }
 .shopcar-box {
+  margin-top: 0.2rem;
   font-size: 0.24rem;
   th {
     text-align: center;
@@ -137,7 +137,7 @@ export default {
     }
     .count {
       display: inline-block;
-      width: 0.5rem;
+      width: 0.2rem;
     }
   }
   tr > td:last-child {
