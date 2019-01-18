@@ -16,7 +16,7 @@
       <table border="1"
              class="shopcar">
         <tr>
-          <th>道具名称</th>
+          <th width='10%'>道具名称</th>
           <th>价格</th>
           <th>数量</th>
           <th>总价</th>
@@ -27,7 +27,7 @@
           <td>{{goods.price}}</td>
           <td>
             <button @click="goods.count-=1"
-                    v-if="goods.count>1">-</button>
+                    :disabled="(goods.count <= 1)">-</button>
             {{goods.count}}
             <button @click="goods.count+=1">+</button>
           </td>
@@ -35,13 +35,11 @@
             <button @click="del(index)">del</button>
           </td>
         </tr>
-        <tr>
-          <td>
-            总价：{{totalPrice}} <button v-if="shopingCar.length"
-                    @click="del()">delAll</button>
-          </td>
-        </tr>
       </table>
+      <div>
+        总价：{{totalPrice}} <button v-if="shopingCar.length"
+                @click="del()">delAll</button>
+      </div>
     </div>
   </div>
 </template>
