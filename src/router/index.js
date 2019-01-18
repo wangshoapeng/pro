@@ -58,6 +58,11 @@ export default new Router({
     path: '/tab',
     name: 'tab',
     component: () => import('../view/tab.vue')
+  },
+  {
+    path: '/shoping-car',
+    name: 'shopcar',
+    component: () => import('../view/ShopingCar.vue')
   }
   ]
 })

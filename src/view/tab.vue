@@ -23,6 +23,18 @@
         {{tab.content}}
       </div>
     </div>
+    <input type="text"
+           v-model="one">
+    <br>
+    <input type="text"
+           v-model="tow">
+    <br>
+    <input type="text"
+           v-model="three">
+    <br>
+    <input type="text"
+           v-model="four">
+    <br>
   </div>
 </template>
 <script>
@@ -35,7 +47,18 @@ export default {
         { title: '新闻2', content: '新闻++++++++2' },
         { title: '新闻3', content: '新闻++++++++3' }
       ],
-      actived: 0
+      actived: 0,
+      one: 1,
+      tow: 2,
+      three: 3
+    }
+  },
+  computed: {
+    four () {
+      if (this.one) {
+        console.log(this.one)
+      }
+      return this.one
     }
   },
   created () {

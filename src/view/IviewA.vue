@@ -4,22 +4,32 @@
     <div class="iview_box">
       <ul>
         <li>
-          <Card style="width:350px" class="card">
+          <Card style="width:350px"
+                class="card">
             <p slot="title">
               <Icon type="ios-film-outline"></Icon>
               Classic film
             </p>
-            <a href="#" slot="extra" @click.prevent="changeLimit">
+            <a href="#"
+               slot="extra"
+               @click.prevent="changeLimit">
               <Icon type="ios-loop-strong"></Icon>
               Change
             </a>
             <ul>
-              <li v-for="item in randomMovieList" :key="item.url" class="movie-item">
-                <a :href="item.url" target="_blank">{{ item.name }}</a>
+              <li v-for="item in randomMovieList"
+                  :key="item.url"
+                  class="movie-item">
+                <a :href="item.url"
+                   target="_blank">{{ item.name }}</a>
                 <span>
-                  <Icon type="ios-star" v-for="n in 4" :key="n"></Icon>
-                  <Icon type="ios-star" v-if="item.rate >= 9.5"></Icon>
-                  <Icon type="ios-star-half" v-else></Icon>
+                  <Icon type="ios-star"
+                        v-for="n in 4"
+                        :key="n"></Icon>
+                  <Icon type="ios-star"
+                        v-if="item.rate >= 9.5"></Icon>
+                  <Icon type="ios-star-half"
+                        v-else></Icon>
                   {{ item.rate }}
                 </span>
               </li>
@@ -44,8 +54,11 @@
         </li>
       </ul>
     </div>
-    <Carousel autoplay v-model="value2" loop>
-      <CarouselItem v-for="(item,index) in 5" :key="index">
+    <Carousel autoplay
+              v-model="value2"
+              loop>
+      <CarouselItem v-for="(item,index) in 5"
+                    :key="index">
         <div class="demo-carousel">
           <div class="demo-content"></div>
         </div>
