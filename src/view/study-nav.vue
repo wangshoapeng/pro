@@ -15,7 +15,7 @@ export default {
     return {
       studyNavList: [
         { link: '/shoping-car', content: 'Shoping Car', iconClass: '' },
-        { link: '/prop', content: 'Prop-传值', iconClass: '' },
+        { link: '/prop-pass-value', content: 'Prop Pass Value', iconClass: '' },
         { link: '/emit', content: '$emit-事件', iconClass: '' },
         { link: '/alert', content: 'alert Min', iconClass: '' },
         { link: '/alertMin', content: '$emit-事件', iconClass: '' },

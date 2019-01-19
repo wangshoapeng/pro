@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-head>Prop传值与通信</t-head>
+    <t-header>组件传值与通信</t-header>
   </div>
 </template>
 <script>

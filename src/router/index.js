@@ -22,12 +22,12 @@ export default new Router({
     {
       path: '/shoping-car',
       name: 'shopcar',
-      component: () => import('../view/ShopingCar.vue')
+      component: () => import('@/view/ShopingCar.vue')
     },
     {
-      path: '/prop',
+      path: '/prop-pass-value',
       name: 'emit',
-      component: () => import('@/components/emit/EmitA.vue')
+      component: () => import('@/view/PropPage.vue')
     },
     {
       path: '/emit',
