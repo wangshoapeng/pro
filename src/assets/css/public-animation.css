@@ -5,7 +5,7 @@
 
 .router-view-enter-active,
 .router-view-leave-active {
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
 

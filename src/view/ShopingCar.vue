@@ -1,42 +1,44 @@
 <template>
   <div>
-    <t-header>Shoping Car</t-header>
-    <div class="commodity-box">
-      <div v-for="(commodity,index) in commodityList" :key="index">
-        <div class="commodity">
-          <div class="commodity-title">{{commodity.name}}</div>
-          <div class="commodiyt-price">￥{{commodity.price}}</div>
-          <button @click="buy(index)">buy</button>
+    <t-header>购物车简单例子</t-header>
+    <div class="scroll-wrap">
+      <div class="commodity-box">
+        <div v-for="(commodity,index) in commodityList" :key="index" @click="buy(index)">
+          <div class="commodity">
+            <div class="commodity-title">{{commodity.name}}</div>
+            <div class="commodiyt-price">￥{{commodity.price}}</div>
+            <button>buy</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="shopcar-box">
-      <table border="1" class="shopcar">
-        <tr>
-          <th width='10%'></th>
-          <th width='25%'>商品名称</th>
-          <th width="20%">商品单价</th>
-          <th width="15%">数量</th>
-          <th>总价</th>
-        </tr>
-        <tr v-for="(goods,index) in shopingCar" :key="index">
-          <td>{{index+1}}</td>
-          <td>{{goods.name}}</td>
-          <td>{{goods.price}}</td>
-          <td>
-            <button @click="goods.count -=1 " :disabled="goods.count <= 1">-</button>
-            <span class="count">{{goods.count}}</span>
-            <button @click="goods.count +=1 ">+</button>
-          </td>
-          <td>
-            ￥ {{((goods.price*1000)*goods.count/1000)}}
-            <button @click="del(index)">del</button>
-          </td>
-        </tr>
-      </table>
-      <div class="total-price">
-        总价：￥ {{totalPrice}}
-        <button v-if="shopingCar.length" @click="del()">delAll</button>
+      <div class="shopcar-box">
+        <table border="1" class="shopcar">
+          <tr>
+            <th width='10%'></th>
+            <th width='25%'>商品名称</th>
+            <th width="20%">商品单价</th>
+            <th width="15%">数量</th>
+            <th>总价</th>
+          </tr>
+          <tr v-for="(goods,index) in shopingCar" :key="index">
+            <td>{{index+1}}</td>
+            <td>{{goods.name}}</td>
+            <td>{{goods.price}}</td>
+            <td>
+              <button @click="goods.count -=1 " :disabled="goods.count <= 1">-</button>
+              <span class="count">{{goods.count}}</span>
+              <button @click="goods.count +=1 ">+</button>
+            </td>
+            <td>
+              ￥ {{((goods.price*1000)*goods.count/1000)}}
+              <button @click="del(index)">del</button>
+            </td>
+          </tr>
+        </table>
+        <div class="total-price">
+          总价：￥ {{totalPrice}}
+          <button v-if="shopingCar.length" @click="del()">delAll</button>
+        </div>
       </div>
     </div>
   </div>
@@ -44,7 +46,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       commodityList: [
         {
@@ -64,7 +66,23 @@ export default {
           price: '999.98'
         },
         {
-          name: 'iphoneX',
+          name: 'HuaweiMagic',
+          price: '3668.87'
+        },
+        {
+          name: 'switch',
+          price: '3555.87'
+        },
+        {
+          name: 'iphoneX4',
+          price: '36.87'
+        },
+        {
+          name: 'iphoneX1',
+          price: '36.87'
+        },
+        {
+          name: 'iphoneX2',
           price: '36.87'
         }
       ],
@@ -72,7 +90,7 @@ export default {
     }
   },
   computed: {
-    totalPrice () {
+    totalPrice() {
       let priceAll = 0
       this.shopingCar.forEach(i => {
         priceAll += i.price * 1000 * i.count
@@ -81,13 +99,13 @@ export default {
     }
   },
   methods: {
-    buy (index) {
+    buy(index) {
       let goods = this.commodityList[index]
       for (let i = 0; i < this.shopingCar.length; i++) {
         if (this.shopingCar[i].name === goods.name) {
           this.shopingCar[i].count += 1
           // eslint-disable-next-line semi
-          return;
+          return
         }
       }
       this.shopingCar.push({
@@ -97,7 +115,7 @@ export default {
         count: 1
       })
     },
-    del (index = 'none') {
+    del(index = 'none') {
       if (index === 'none') {
         this.shopingCar = []
       } else {
@@ -113,9 +131,13 @@ export default {
   margin: 0 auto;
   font-size: 0.24rem;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   .commodity {
-    margin-right: 0.05rem;
+    width: 2rem;
+    height: 1.5rem;
+    border: 1px solid black;
+    margin: 0.2rem 0.1rem;
   }
 }
 .shopcar {

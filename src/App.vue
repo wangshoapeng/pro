@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <transition name="router-view">
-      <router-view />
-    </transition>
+    <router-view />
   </div>
 </template>
 <script>
@@ -22,6 +20,10 @@ body,
 #app > div {
   height: 100%;
   overflow: hidden;
+}
+.scroll-y {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 #app {
   font-family: Arial, Helvetica Neue, sans-serif;

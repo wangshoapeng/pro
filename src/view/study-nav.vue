@@ -1,14 +1,9 @@
 <template>
   <div id="study-nav">
     <t-header>Demo-List</t-header>
-    <div class="scroll-wrap"
-         ref='scroll'>
-      <router-link v-for="(item,index) in studyNavList"
-                   class="base-link"
-                   :to="item.link"
-                   :key="index">{{item.content}}
-        <i class="iconfont"
-           :class="item.iconClass || 'x-jiantouyou'"></i>
+    <div class="scroll-wrap" ref='scroll'>
+      <router-link v-for="(item,index) in studyNavList" class="base-link" :to="item.link" :key="index">{{item.content}}
+        <i class="iconfont" :class="item.iconClass || 'x-jiantouyou'"></i>
       </router-link>
     </div>
   </div>
@@ -16,9 +11,10 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       studyNavList: [
+        { link: '/shoping-car', content: 'Shoping Car', iconClass: '' },
         { link: '/prop', content: 'Prop-传值', iconClass: '' },
         { link: '/emit', content: '$emit-事件', iconClass: '' },
         { link: '/alert', content: 'alert Min', iconClass: '' },
@@ -33,7 +29,6 @@ export default {
         { link: '/emit', content: '$emit-事件', iconClass: '' },
         { link: '/alert', content: 'alert Min', iconClass: '' },
         { link: '/alertMin', content: '$emit-事件', iconClass: '' },
-        { link: '/shoping-car', content: 'Shop Car', iconClass: '' },
         { link: '/tab', content: 'tab ', iconClass: '' }
       ]
     }
