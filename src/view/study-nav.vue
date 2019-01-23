@@ -11,11 +11,11 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       studyNavList: [
         { link: '/shoping-car', content: 'Shoping Car', iconClass: '' },
-        { link: '/prop-pass-value', content: 'Prop Pass Value', iconClass: '' },
+        { link: '/from', content: 'From Demos', iconClass: '' },
         { link: '/emit', content: '$emit-事件', iconClass: '' },
         { link: '/alert', content: 'alert Min', iconClass: '' },
         { link: '/alertMin', content: '$emit-事件', iconClass: '' },
