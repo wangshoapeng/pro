@@ -1,12 +1,13 @@
 <template>
   <div id="t-check-group">
-    <h1>check components</h1>
+    <!-- <h1>check components</h1>
     <div v-for=" (check,index) in checkList" :key="index">
       <input :id="'check-group'+index" :type="single ? 'radio' :'checkbox'" :value="check.value" v-model="checkedList">
       <label :for="'check-group'+index">
         <span>{{check.value}}</span>
-      </label>
-    </div>
+      </label> -->
+    <button @click="send">1234</button>
+  </div>
   </div>
 </template>
 
@@ -37,7 +38,18 @@ export default {
       this.$emit('up', val)
     }
   },
-  methods: {},
+  methods: {
+    send () {
+      this.$http
+        .get('http://v.juhe.cn/toutiao/index?type=top&key=APPKEY')
+        .then(res => {
+          console.log(res)
+        })
+        .catch(res => {
+          console.log('res :', res)
+        })
+    }
+  },
   components: {}
 }
 </script>

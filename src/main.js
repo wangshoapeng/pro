@@ -4,20 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import iView from 'iview'
-
+import Axios from 'axios'
 import '@/assets/js/rem.js'
-
 import 'iview/dist/styles/iview.css'
 import '@/assets/icon/iconfont.css'
-
 import Header from '@/components/mian-header.vue'
 
 Vue.use(iView)
-
 Vue.component('tHeader', Header)
 
 Vue.config.productionTip = false
-
+Vue.prototype.$http = Axios
 Vue.prototype.bus = new Vue()
 /* eslint-disable no-new */
 new Vue({
