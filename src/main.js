@@ -14,6 +14,7 @@ Vue.use(iView)
 Vue.component('tHeader', Header)
 
 Vue.config.productionTip = false
+Axios.defaults.baseURL = '/api'
 Vue.prototype.$http = Axios
 Vue.prototype.bus = new Vue()
 /* eslint-disable no-new */

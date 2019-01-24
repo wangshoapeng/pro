@@ -41,9 +41,10 @@ export default {
   methods: {
     send () {
       this.$http
-        .get('http://v.juhe.cn/toutiao/index?type=top&key=APPKEY')
+        .post('/login', { c: 'weixin', s: 'adfasdfasdf' })
         .then(res => {
-          console.log(res)
+          window.test = res.data
+          console.log(res.data)
         })
         .catch(res => {
           console.log('res :', res)
